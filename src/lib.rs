@@ -1,8 +1,14 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+use std::{io};
+
+pub fn input() -> String {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+
+    match input.trim() {
+        _ => return input,
     }
+
+    // match input.trim() {
+    //     _ => return input.trim().to_string(),
+    // }
 }
